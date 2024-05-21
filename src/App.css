@@ -1,18 +1,20 @@
 /* Estilo para centralizar o conteúdo */
 .App {
   text-align: center;
+  
 }
+
 
 /* Estilo para o cabeçalho */
 .App-header {
-  background-color: #282c34; /* Cor de fundo */
+  background-color: #3e5583; /* Cor de fundo */
   min-height: 100vh; /* Altura mínima da tela inteira */
   display: flex; /* Alinhar itens horizontalmente */
   flex-direction: column; /* Colocar os itens em uma coluna */
   align-items: center; /* Alinhar itens horizontalmente no centro */
   justify-content: center; /* Alinhar itens verticalmente no centro */
   font-size: calc(10px + 2vmin); /* Tamanho da fonte responsiva */
-  color: white; /* Cor do texto */
+  color: rgb(154, 48, 48); /* Cor do texto */
 }
 
 /* Estilo para os botões */
@@ -32,15 +34,18 @@
 
 /* Estilo para cada botão */
 .btn1 {
-  background-color: #FF5733; /* Laranja */
+  background-color: #421d7e; /* Laranja */
+  border-radius: 10;
 }
 
 .btn2 {
-  background-color: #33FF57; /* Verde */
+  background-color: #0c34ba; /* Verde */
+  border-radius: 10;
 }
 
 .btn3 {
   background-color: #5733FF; /* Roxo */
+  border-radius: 10;
 }
 
 .buttonsDiv {
@@ -48,13 +53,13 @@
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  background-color: #282c34;
-  width: 50%;
+  background-color: #9a39ba;
+  width: 100%;
 }
 
 .mainDiv {
   display: flex;
-  background-color: rgb(0, 1, 1);
+  background-color: rgb(76, 29, 156);
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -64,7 +69,7 @@
   margin-bottom: 20px; /* Espaçamento inferior */
   font-size: 24px; /* Tamanho da fonte */
   font-weight: bold; /* Negrito */
-  color: #61dafb; /* Cor do texto */
+  color: #5a24b8; /* Cor do texto */
 }
 
 /* Estilos para animação */
@@ -76,4 +81,3 @@
     transform: rotate(360deg);
   }
 }
-
