@@ -10,7 +10,7 @@ function Button2Page() {
       <p>Individuals at this level require more substantial support. They may have more significant difficulties in social, communication, and behavioral areas, which can affect their ability to function independently in various aspects of daily life. They may need regular and structured support to deal with daily challenges.</p>
       <h1>The characteristics of autism type 2:</h1>
 
-      <img src={Born} alt="Flowers in Chania" width="460" height="345"/>
+      <img src={Born} alt="" width="460" height="345"/>
 
 <p>
 <li>1. Communication and Social Interaction Difficulties: Individuals with autism type 2 may struggle with both verbal and nonverbal communication, such as difficulty initiating or maintaining conversations, understanding others' perspectives, and interpreting social cues. They may prefer spending time alone and have difficulty establishing and maintaining friendships. </li>

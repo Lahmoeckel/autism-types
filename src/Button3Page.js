@@ -1,4 +1,5 @@
 import React from 'react';
+import diferences from "./assets/diferences.jpg";
 
 function Button3Page() {
   return (
@@ -8,7 +9,7 @@ function Button3Page() {
       {/* Descrição */}
       <p>This is the most severe level of autism, where individuals need very substantial support. Individuals at this level may have severe difficulties in social, communication, and behavioral areas, which can significantly affect their ability to function independently. They may need intensive and ongoing assistance to deal with a wide range of challenges.</p>
       <p>The characteristics of autism type 3:
-      <img src={autism} alt="Flowers in Chania" width="460" height="345"/>
+      <img src={diferences} alt="" width="460" height="345"/>
 
 <li> 1. Significant Communication Challenges: Individuals with level 3 autism often struggle with both verbal and nonverbal communication. This can manifest as limited verbal skills, difficulty understanding or using body language, gestures, or facial expressions to communicate.</li>
 

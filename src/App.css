@@ -57,12 +57,19 @@
   width: 100%;
 }
 
-.mainDiv {
+.hometitle {
   display: flex;
-  background-color: rgb(76, 29, 156);
+  flex-direction:column;
+  background-color: rgb(223, 234, 12);
   height: 100vh;
   justify-content: center;
   align-items: center;
+
+}
+
+.h5Teste{
+  border-radius: 50;
+  background-color: aquamarine;
 }
 /* Estilo para o título */
 .title {

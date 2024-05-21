@@ -10,7 +10,7 @@ function Button1Page() {
       <p>The Autism Spectrum Disorder (ASD) is often classified into different severity levels, based on the degree of support needed to cope with symptoms and function in everyday life. The classification into levels is commonly referred to as "support levels". Here are the three main levels:</p>
       <h1>Characteristics of autism type 1:</h1>
       
-      <img src={autism} alt="Flowers in Chania" width="460" height="345"/>
+      <img src={autism} alt="" width="460" height="345"/>
 
 <p><li>1. Mild Communication and Social Difficulties: Individuals with autism type 1 may experience mild challenges in communication and social interaction. They may have difficulty with aspects such as understanding nonverbal cues, initiating and maintaining conversations, and interpreting social norms, but these difficulties are typically less severe compared to other types of autism.</li>
 
