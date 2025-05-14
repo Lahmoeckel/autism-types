@@ -1,38 +1,28 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home.js';
+import Button1Page from './Button1Page.js';
+import Button2Page from './Button2Page.js';
+import Button3Page from './Button3Page.js';
 
-function Link({ text }) {
-  // Função para associar ação ao clicar no botão 1
-  const handleClickBotao1 = () => {
-    // Redireciona para o link correspondente ao botão 1
-    window.location.href = "link_do_botao_1";
-  };
 
-  // Função para associar ação ao clicar no botão 2
-  const handleClickBotao2 = () => {
-    // Redireciona para o link correspondente ao botão 2
-    window.location.href = "link_do_botao_2";
-  };
-
-  // Função para associar ação ao clicar no botão 3
-  const handleClickBotao3 = () => {
-    // Redireciona para o link correspondente ao botão 3
-    window.location.href = "link_do_botao_3";
-  };
-
+function App() {
   return (
-    <div className='mainDiv'> 
-      {/* <p>
-        <code>{text}</code>
-      </p> */}
-      
-      <div className="buttonsDiv">
-        <button className="btn1" onClick={handleClickBotao1}>Botão 1</button>
-        <button className="btn2" onClick={handleClickBotao2}>Botão 2</button>
-        <button className="btn3" onClick={handleClickBotao3}>Botão 3</button>
-      </div>
-    </div>
+
+    <BrowserRouter>
+      <Routes>
+        {/* Rota para a página inicial */}
+        <Route path="/" element={<Home />} />
+        {/* Rota para a página do botão 1 */}
+        <Route path="/button1" element={<Button1Page />} />
+        {/* Rota para a página do botão 2 */}
+        <Route path="/button2" element={<Button2Page />} />
+        {/* Rota para a página do botão 3 */}
+        <Route path="/button3" element={<Button3Page />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default Link;
+export default App;
+
