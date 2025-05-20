@@ -1,20 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Button as ChakraButton } from '@chakra-ui/react'; // Usando Chakra Button
-import "./App.css"; // Estilos importados do arquivo CSS
+import { Button as ChakraButton } from '@chakra-ui/react';
+import "./App.css";
 import logo from './assets/aautism.jpg';
-
-
 
 function Home() {
   const navigate = useNavigate();
 
-  // Definindo estados para as curiosidades dos cards
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   const [shuffleType1, setShuffleType1] = useState("Individuals with Level 1 autism often have mild challenges with social interaction and communication.");
   const [shuffleType2, setShuffleType2] = useState("Those with Level 2 autism experience more noticeable difficulties with communication and social interaction.");
   const [shuffleType3, setShuffleType3] = useState("Level 3 autism involves significant challenges in communication, social interaction, and daily functioning.");
 
-  // Função para mudar a curiosidade apenas no card clicado
   const shuffleCuriosity = (level) => {
     const curiositiesLevel1 = [
       "Individuals with Level 1 autism often have mild challenges with social interaction and communication.",
@@ -46,22 +52,35 @@ function Home() {
 
   return (
     <div className="App">
-      {/* Título centralizado */}
+      {/* Botão Dark Mode no canto superior direito com ChakraButton */}
+      <div style={{ position: "absolute", top: 10, right: 10, zIndex: 10 }}>
+        <ChakraButton
+          onClick={() => setDarkMode(!darkMode)}
+          colorScheme={darkMode ? "yellow" : "blue"}
+          size="sm"
+        >
+          {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+        </ChakraButton>
+      </div>
+
       <header className="App-header">
         <h1 className="title">Autism Types</h1>
       </header>
-      <img style={{ position: "absolute", width: "100%", height: "100%", zIndex: -1 }} src={logo} alt="Logo" />
 
-      {/* Botões com lacunas (cards) */}
+      <img
+        style={{ position: "absolute", width: "100%", height: "100%", zIndex: -1 }}
+        src={logo}
+        alt="Logo"
+      />
+
       <div className="buttonsDiv">
 
-        {/* Card 1 - Autism Level 1 */}
         <div className="card">
           <h2>Autism Level 1 (Mild):</h2>
           <p>{shuffleType1}</p>
           <button onClick={() => shuffleCuriosity(1)}>Shuffle Curiosity</button>
           <ChakraButton
-            onClick={() => { navigate("/button1"); }}
+            onClick={() => navigate("/button1")}
             size="md"
             height="48px"
             width="200px"
@@ -72,13 +91,12 @@ function Home() {
           </ChakraButton>
         </div>
 
-        {/* Card 2 - Autism Level 2 */}
         <div className="card">
           <h2>Autism Level 2 (Moderate):</h2>
           <p>{shuffleType2}</p>
           <button onClick={() => shuffleCuriosity(2)}>Shuffle Curiosity</button>
           <ChakraButton
-            onClick={() => { navigate("/button2"); }}
+            onClick={() => navigate("/button2")}
             size="md"
             height="48px"
             width="200px"
@@ -89,13 +107,12 @@ function Home() {
           </ChakraButton>
         </div>
 
-        {/* Card 3 - Autism Level 3 */}
         <div className="card">
           <h2>Autism Level 3 (Severe):</h2>
           <p>{shuffleType3}</p>
           <button onClick={() => shuffleCuriosity(3)}>Shuffle Curiosity</button>
           <ChakraButton
-            onClick={() => { navigate("/button3"); }}
+            onClick={() => navigate("/button3")}
             size="md"
             height="48px"
             width="200px"
@@ -107,7 +124,6 @@ function Home() {
         </div>
 
       </div>
-
     </div>
   );
 }

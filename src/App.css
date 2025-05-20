@@ -1,14 +1,53 @@
-/* Estilo base para a página inteira */
+/* Estilo base para html e body */
 html,
 body {
-  margin: 100;
-  padding: 100;
+  margin: 0;
+  padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: rgb(248, 245, 245);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  transition: background-color 0.3s ease, color 0.3s ease;
   z-index: -1;
+}
+
+/* Light Mode */
+body {
+  color: black;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+  background-image: none;
+  /* remove imagem de fundo, se existir */
+}
+
+/* Card no modo escuro */
+body.dark .card {
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+}
+
+body.dark .card h2,
+body.dark .card p,
+body.dark .card span,
+body.dark .card li,
+body.dark .card a {
+  color: white;
+}
+
+body.dark .card button {
+  background-color: #ff7f50;
+  color: #fbf7f7;
+  border: 1px solid #ff7f50;
+}
+
+body.dark .card button:hover {
+  background-color: #666;
 }
 
 /* Estilo do título centralizado */
@@ -48,6 +87,7 @@ body {
 /* Estilo dos cards */
 .card {
   background-color: #fff;
+  color: black;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,6 +99,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Estilo do título nos cards */
